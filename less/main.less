@@ -218,12 +218,92 @@ body {
 
 /* page two */
 .about {
-	
+    text-align: left;
+	.about_name {
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        border: 2px solid @colorP2;
+        margin: 120px auto 0;
+        text-align: center;
+        font-size: 24px;
+    }
+    .about_info {
+        width: 80%;
+        height: 400px;
+        margin: 50px auto 0;
+        padding-left: 100px;
+        h3 {
+            color: @colorP2;
+            font-size: 40px;
+        }
+        .about_info_part1 {
+            width: 30%;
+            height: 300px;
+            margin-top: 50px;
+            float: left;
+            position: relative;
+            .about_info_part4 {
+                width: 80%;
+                height: 200px;
+                margin-top: 80px;
+                float: right;
+                position: relative;
+            }
+        }
+        .about_info_part2 {
+            width: 30%;
+            height: 400px;
+            margin: 0 53px;
+            float: left;
+            position: relative;
+            .about_info_part5 {
+                width: 80%;
+                height: 200px;
+                margin-top: 120px;
+                float: right;
+                position: relative;
+            }
+        }
+        .about_info_part3 {
+            width: 30%;
+            height: 400px;
+            margin-top: 120px;
+            float: right;
+            position: relative;
+        }
+        .about_info_part1::before,
+        .about_info_part2::before,
+        .about_info_part3::before,
+        .about_info_part4::before,
+        .about_info_part5::before {
+            width: 3px;
+            height: 350px;
+            content: ' ';
+            position: absolute;
+            top: 30px;
+            left: -14px;
+            background-image: linear-gradient(to bottom, yellow, rgba(0,0,0,0));
+        }
+        .about_info_part1::after,
+        .about_info_part2::after,
+        .about_info_part3::after,
+        .about_info_part4::after,
+        .about_info_part5::after {
+            width: 10px;
+            height: 10px;
+            content: ' ';
+            border: 3px solid yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: -20px;
+        }
+    }
 }
 
 /* page three */
 .skiil {
-    
     .skiil_name {
         width: 300px;
         height: 80px;
@@ -231,11 +311,12 @@ body {
         border: 2px solid @colorP3;
         margin: 0 auto;
         text-align: center;
+        font-size: 24px;
     }
     .skiil_introduce {
         width: 300px;
         margin: 0 auto;
-        padding: 50px 0;
+        padding: 60px 0 50px;
         text-align: center;
         p {
             line-height: 50px;
@@ -260,7 +341,6 @@ body {
                 font-size: 30px;
             }
             span {
-                margin-top: 10px;
                 font-size: 20px;
                 text-align: center;
             }
