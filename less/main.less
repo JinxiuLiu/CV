@@ -2,11 +2,8 @@
 
 /* 公共样式 */
 @colorP1: #004B85;
-
 @colorP2: #FDCB3D;
-
 @colorP3: #535353;
-
 @colorP4: #00A0E9;
 
 /*css 初始化 */
@@ -39,7 +36,6 @@ body {
 
 
 /* 小箭头 */
-
 .arrow {
     width: 27px;
     height: 25px;
@@ -57,7 +53,7 @@ body {
     -ms-animation: up_down 1000ms linear infinite;
     animation: up_down 1000ms linear infinite;
 }
-
+/* 小箭头动画 */
 @keyframes up_down {
     0% {
         transform: translateY(0px);
@@ -72,7 +68,6 @@ body {
 
 
 /* 背景图 */
-
 .one {
     background: url(../images/bg1.png);
 }
@@ -104,59 +99,58 @@ body {
         width: 100%;
         min-width: 768px;
         margin: 0 auto;
-        .logo {
-            /*width: 80px;*/
+    }
+    .logo {
+        /*width: 80px;*/
+        height: 60px;
+        float: left;
+        margin-left: 83px;
+        .header-img {
+            width: 60px;
             height: 60px;
+            background: url(../images/logo.png) no-repeat center center;
+            background-size: contain;
+            border-radius: 50%;
             float: left;
-            margin-left: 83px;
-            .header-img {
-                width: 60px;
-                height: 60px;
-                background: url(../images/logo.png) no-repeat center center;
-                background-size: contain;
-                border-radius: 50%;
-                float: left;
-                transition: box-shadow 0.5s;
-                -webkit-transition: box-shadow 0.5s;
+            transition: box-shadow 0.5s;
+            -webkit-transition: box-shadow 0.5s;
+        }
+        .header-img:hover {
+            box-shadow: 0 0 10px #16C0F8;
+        }
+        .header-p {
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            font: 18px "楷体";
+            color: #333333;
+            .header-p1 {
+                margin: 0px 15px 5px;
+                padding: 5px 15px;
+                width: 80px;
+                border-bottom: 1px solid #333333;
             }
-            .header-img:hover {
-                box-shadow: 0 0 10px #16C0F8;
-            }
-            .header-p {
-                float: left;
-                margin-left: 10px;
-                text-align: center;
-                font: 18px "楷体";
-                color: #333333;
-                .header-p1 {
-                    margin: 0px 15px 5px;
-                    padding: 5px 15px;
-                    width: 80px;
-                    border-bottom: 1px solid #333333;
-                }
-                .header-p2 {
-                    padding: 0 15px;
-                }
+            .header-p2 {
+                padding: 0 15px;
             }
         }
-        .nav {
-            float: right;
-            margin-right: 83px;
-            li {
-                float: left;
-                font: 400 20px/60px "楷体";
-                margin: 0 20px;
-                color: #000;
-                list-style: none;
-                a {
-                    color: #0B1013;
-                    text-decoration: none;
-                }
+    }
+    .nav {
+        float: right;
+        margin-right: 83px;
+        li {
+            float: left;
+            font: 400 20px/60px "楷体";
+            margin: 0 20px;
+            color: #000;
+            list-style: none;
+            a {
+                color: #0B1013;
+                text-decoration: none;
             }
         }
     }
 }
-
 
 /* page one */
 .home {
@@ -212,7 +206,7 @@ body {
 /* page two */
 .about {
     text-align: left;
-	.about_name {
+    .about_name {
         width: 300px;
         height: 80px;
         line-height: 80px;
@@ -276,7 +270,7 @@ body {
             position: absolute;
             top: 30px;
             left: -14px;
-            background-image: linear-gradient(to bottom, yellow, rgba(0,0,0,0));
+            background-image: linear-gradient(to bottom, yellow, rgba(0, 0, 0, 0));
         }
         .about_info_part1::after,
         .about_info_part2::after,
@@ -326,7 +320,6 @@ body {
             float: left;
             list-style: none;
             position: relative;
-            
             strong {
                 position: absolute;
                 top: 41px;
@@ -345,98 +338,95 @@ body {
 .works {
     overflow: hidden;
     .works_title {
-        // width: 300px;
-        // height: 80px;
-        // line-height: 80px;
-        // border: 2px solid @colorP4;
-        // margin: 70px auto 0;
-        // text-align: center;
-        // font-size: 24px;
         height: 85px;
         line-height: 85px;
         color: #272a2c;
         position: relative;
+        h3 {
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            border: 2px solid @colorP4;
+            margin: 60px auto 0;
+            text-align: center;
+            font-size: 24px;
+        }
         a {
             position: absolute;
-            right: 0;
-            color: #272a2c;;
-            font-size: 16px;
-            span {
-                margin-left: 10px;
-                display: inline-block;
-                width: 21px;
-                height: 16px;
-                background: url("../images/index_1_z_8fedf32.png") -20px -38px no-repeat;
-            }
+            right: 47%;
+            font-size: 20px;
+            color: @colorP4;
+            text-decoration: none;
+        }
+        .fa-refresh {
+            margin-left: 10px;
         }
     }
     .works_wrap {
         width: 1140px;
         overflow: hidden;
         margin: 0 auto;
-        .works_wrapbox {
-            .hot_box {
-                width: 350px;
-                height: 300px;
-                // margin: 80px 0 6px 21px;
-                background: #fffdfe;
-                position: relative;
-                box-shadow: 4px 4px 4px #ccc;
-                float: left;
-                a {
-                    display: block;
-                    width: 400px;
-                    height: 176px;
-                    overflow: hidden;
-                    img {
-                        transform: scale(1);
-                        transition: all 1s ease-out;
-                    }
+        .hot_box {
+            width: 350px;
+            height: 300px;
+            margin: 80px 0 6px 21px;
+            background: #fffdfe;
+            position: relative;
+            box-shadow: 4px 4px 4px #ccc;
+            float: left;
+            a {
+                display: block;
+                width: 400px;
+                height: 176px;
+                overflow: hidden;
+                img {
+                    transform: scale(1);
+                    transition: all 1s ease-out;
                 }
-                a:hover img {
-                    transform: scale(1.1);
-                }
-                .hot_title {
-                    color: @colorP4;
-                    font: 700 20px/32px "微软雅黑";
-                    margin: 5px 0 0 20px;
-                    height: 32px;
-                    overflow: hidden;
-                }
-                .hot_txt {
-                    margin: 5px 20px 0 30px;
-                    font: 14px "Microsoft YaHei";
-                    color: #9f9f9f;
-                    text-align: center;
-                    text-align: left;
-                }
-                .gw_link {
-                    position: absolute;
-                    bottom: 15px;
-                    right: 20px;
-                    width: 88px;
-                    height: 30px;
-                    display: block;
-                    background: url("../images/btn1_c7dd2d3.png") no-repeat 0 -30px;
-                    font: 12px/30px "Micosoft YaHei";
-                    text-align: center;
-                    color: #9f9f9f;
-                    cursor: pointer;
-                }
-                .gw_link:hover {
-                    color: #fff;
-                    text-decoration: none;
-                    background-position: 0 0;
-                    -webkit-transition: all .2s ease-out;
-                    transition: all .2s ease-out;
-                    animation: ani-gw-link .3s linear .2s 1 normal;
-                }
+            }
+            a:hover img {
+                transform: scale(1.1);
+            }
+            .hot_title {
+                color: @colorP4;
+                font: 700 20px/32px "微软雅黑";
+                margin: 5px 0 0 20px;
+                height: 32px;
+                overflow: hidden;
+            }
+            .hot_txt {
+                margin: 5px 20px 0 30px;
+                font: 14px "Microsoft YaHei";
+                color: #9f9f9f;
+                text-align: center;
+                text-align: left;
+            }
+            .gw_link {
+                position: absolute;
+                bottom: 15px;
+                right: 20px;
+                width: 88px;
+                height: 30px;
+                display: block;
+                background: url("../images/btn1_c7dd2d3.png") no-repeat 0 -30px;
+                font: 12px/30px "Micosoft YaHei";
+                text-align: center;
+                color: #9f9f9f;
+                cursor: pointer;
+            }
+            .gw_link:hover {
+                color: #fff;
+                text-decoration: none;
+                background-position: 0 0;
+                -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+                animation: ani-gw-link .3s linear .2s 1 normal;
             }
         }
     }
 }
 
-/* 动画 */
+/* 第四屏 动画 淡入淡出 */
 .works_wrapbox.hideing .hot_box {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
@@ -503,4 +493,22 @@ body {
     -ms-transition: all .4s linear .6s;
     -o-transition: all .4s linear .6s;
     transition: all .4s linear .6s;
+}
+
+/* page five */
+.contact {
+    color: @colorP3;
+    text-align: center;
+    .contact_title {
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        border: 2px solid @colorP3;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+.footer {
+    text-align: center;
 }
