@@ -23,7 +23,7 @@ $(function() {
         afterLoad: function(anchorLink, index) {
             if (index == 2) {
                 $(".about_name").html("<h3>关 于 我</h3>")
-                    .animate({ width: "300px", height: '80px' }, 800, function() {
+                    .animate({ width: "300px", height: '80px' }, 600, function() {
                         $('.about_info_part1').animate({ opacity: '1' }, 400, function() {
                             $('.about_info_part4').animate({ opacity: '1' }, 400, function() {
                                 $('.about_info_part2').animate({ opacity: '1' }, 400, function() {
@@ -41,8 +41,8 @@ $(function() {
             if (index == 3) {
                 $('.skiil_name').animate({ width: "300px", height: '80px' }, 800, function() {
                     $(this).html('<h3>十八般武艺,熟能生巧</h3>');
-                    $('.skiil_name h3').animate({ top: "0px" }, 700, function() {
-                        $(".skiil_introduce p").eq(0).animate({ opacity: "1" }, 800, function() {
+                    $('.skiil_name h3').animate({ top: "0px" }, 500, function() {
+                        $(".skiil_introduce p").eq(0).animate({ opacity: "1" }, 700, function() {
                             $(".skiil_introduce p").eq(1).animate({ opacity: "1" }, 700, function() {
                                 $('.skiil_info').animate({ bottom: "0" }, 500, function() {
                                     $('.skiil_info_html').circleProgress({
@@ -99,6 +99,10 @@ $(function() {
 
             }
             if (index == 4) {
+                $('.works_title h3').animate({ width: "300px", height: '80px' }, 700 ,function () {
+                    $(this).html('我 的 作 品');
+                    $('.works_title a').animate({opacity: '1'}, 700).addClass('animated bounceInDown');
+                });
                 setTimeout(function() {
                     $('#box1').css('display', 'none').removeClass('hideing');
                     $("#box2").addClass('hideing').css('display', 'block');
