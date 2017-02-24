@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 /* 公共样式 */
+
 @colorP1: #004B85;
 @colorP2: #FDCB3D;
 @colorP3: #535353;
 @colorP4: #00A0E9;
 
 /*css 初始化 */
+
 html,
 body,
 ul,
@@ -36,6 +38,7 @@ body {
 
 
 /* 小箭头 */
+
 .arrow {
     width: 27px;
     height: 25px;
@@ -53,7 +56,10 @@ body {
     -ms-animation: up_down 1000ms linear infinite;
     animation: up_down 1000ms linear infinite;
 }
+
+
 /* 小箭头动画 */
+
 @keyframes up_down {
     0% {
         transform: translateY(0px);
@@ -68,6 +74,7 @@ body {
 
 
 /* 背景图 */
+
 .one {
     background: url(../images/bg1.png);
 }
@@ -88,7 +95,9 @@ body {
     background: url(../images/bg3.png);
 }
 
+
 /*header nav*/
+
 .header {
     width: 100%;
     height: 60px;
@@ -111,9 +120,16 @@ body {
             background: url(../images/logo.png) no-repeat center center;
             background-size: contain;
             border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
             float: left;
             transition: box-shadow 0.5s;
             -webkit-transition: box-shadow 0.5s;
+            -moz-transition: box-shadow 0.5s;
+            -o-transition: box-shadow 0.5s;
+            -ms-transition: box-shadow 0.5s;
         }
         .header-img:hover {
             box-shadow: 0 0 10px #16C0F8;
@@ -152,9 +168,11 @@ body {
     }
 }
 
+
 /* page one */
 .home {
     text-align: center;
+    color: #004B85;
     .home_name {
         margin: 0 auto;
         font-size: 40px;
@@ -170,34 +188,39 @@ body {
         background: url(../images/logo.png) no-repeat center center;
         background-size: contain;
         border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
         border: 4px solid #004B85;
     }
     .home_info {
         margin: 0 auto;
         padding-top: 30px;
-        font-size: 14px;
-        color: #004B85;
         position: relative;
-        h3 {
-            padding: 5px 0;
-        }
+        // font-size: 14px;
+    }
+    .home_info1 {
+        padding: 5px 0;
+        position: relative;
+        bottom: -300px;
     }
     .home_info::before,
     .home_info::after {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         position: absolute;
         content: ' ';
     }
     .home_info::before {
-        top: 10px;
-        left: 30%;
+        top: 18px;
+        left: -30px;
         border-top: 3px solid #004B85;
         border-left: 3px solid #004B85;
     }
     .home_info::after {
         top: 110px;
-        right: 30%;
+        right: -30px;
         border-bottom: 3px solid #004B85;
         border-right: 3px solid #004B85;
     }
@@ -207,8 +230,8 @@ body {
 .about {
     text-align: left;
     .about_name {
-        width: 300px;
-        height: 80px;
+        width: 0px;
+        height: 0px;
         line-height: 80px;
         border: 2px solid @colorP2;
         margin: 120px auto 0;
@@ -226,37 +249,37 @@ body {
         }
         .about_info_part1 {
             width: 30%;
-            height: 300px;
             margin-top: 50px;
             float: left;
+            opacity: 0;
             position: relative;
             .about_info_part4 {
                 width: 80%;
-                height: 200px;
                 margin-top: 80px;
                 float: right;
+                opacity: 0;
                 position: relative;
             }
         }
         .about_info_part2 {
             width: 30%;
-            height: 400px;
             margin: 0 53px;
             float: left;
+            opacity: 0;
             position: relative;
             .about_info_part5 {
                 width: 80%;
-                height: 200px;
                 margin-top: 120px;
                 float: right;
+                opacity: 0;
                 position: relative;
             }
         }
         .about_info_part3 {
             width: 30%;
-            height: 400px;
             margin-top: 120px;
             float: right;
+            opacity: 0;
             position: relative;
         }
         .about_info_part1::before,
@@ -289,16 +312,21 @@ body {
     }
 }
 
+
 /* page three */
 .skiil {
     .skiil_name {
-        width: 300px;
-        height: 80px;
+        width: 0px;
+        height: 0px;
         line-height: 80px;
         border: 2px solid @colorP3;
         margin: 0 auto;
         text-align: center;
         font-size: 24px;
+        h3 {
+            position: relative;
+            top: -300px;
+        }
     }
     .skiil_introduce {
         width: 300px;
@@ -306,12 +334,15 @@ body {
         padding: 60px 0 50px;
         text-align: center;
         p {
+            opacity: 0;
             line-height: 50px;
         }
     }
     .skiil_info {
         width: 850px;
         margin: 0 auto;
+        position: relative;
+        bottom: -300px;
         li {
             width: 120px;
             height: 120px;
@@ -334,8 +365,10 @@ body {
     }
 }
 
+
 /* page four */
 .works {
+    width: 100%;
     overflow: hidden;
     .works_title {
         height: 85px;
@@ -363,9 +396,9 @@ body {
         }
     }
     .works_wrap {
-        width: 1140px;
+        width: 100%;
         overflow: hidden;
-        margin: 0 auto;
+        margin: 0 10%;
         .hot_box {
             width: 350px;
             height: 300px;
@@ -426,7 +459,9 @@ body {
     }
 }
 
+
 /* 第四屏 动画 淡入淡出 */
+
 .works_wrapbox.hideing .hot_box {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
@@ -495,7 +530,9 @@ body {
     transition: all .4s linear .6s;
 }
 
+
 /* page five */
+
 .contact {
     color: @colorP3;
     text-align: center;
@@ -518,17 +555,18 @@ body {
     }
     .contact_txt {
         p {
-            margin: 5px 0; 
+            margin: 5px 0;
         }
         span {
             width: 300px;
             height: 2px;
             display: block;
             border-top: 1px dashed @colorP3;
-            margin: 30px auto; 
+            margin: 30px auto;
         }
     }
 }
+
 .footer {
     width: 100%;
     height: 50px;

@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="web前端,web前端个人简历,web前端工程师简历,前端开发,web前端简历" />
-    <meta name="description" content="web前端工程师个人简历,利用fullPage创建，在线前端简历--刘金秀">
-    <title>web前端工程师简历</title>
+    <meta name="keywords" content="web前端,web前端个人简历,web前端工程师简历,前端开发,web前端简历,web前端在线简历" />
+    <meta name="description" content="刘金秀的web前端工程师个人简历,在线前端简历">
+    <title>web前端在线简历--刘金秀</title>
     <link rel="stylesheet" href="./libs/fullPage/jquery.fullPage.css">
+    <link rel="stylesheet" href="./less/animate.min.css">
     <link rel="stylesheet" href="./libs/Font-Awesome-master/css/font-awesome.min.css">
     <link rel="stylesheet" href="./less/main.css">
 </head>
@@ -24,11 +25,11 @@
                 </div>
             </div>
             <div class="nav">
-                <ul>
-                    <li><a href="http://me.sayweb.top">首页</a></li>
+                <ul id="menu">
+                    <li><a href="#page1">首页</a></li>
                     <li><a href="http://www.sayweb.top" target="_blank">博客</a></li>
                     <li><a href="https://github.com/JinxiuLiu" target="_blank">GitHub</a></li>
-                    <li><a href="javascript:;">关于</a></li>
+                    <li><a href="#page5">联系我</a></li>
                 </ul>
             </div>
         </div>
@@ -38,23 +39,22 @@
         <!-- home -->
         <div class="section one">
             <div class="home">
-                <!-- 头像 -->
                 <div class="home_name">
-                    <h3>刘 金 秀</h3>
-                    <p>FRONT-END ENGINEER</p>
+                    <h3 id="home_one">刘 金 秀</h3>
+                    <p id="home_two">FRONT-END ENGINEER</p>
                 </div>
+                <!-- 头像 -->
                 <div class="home_portrait"></div>
-                <div class="home_info">
-                    <h3>90后，微弱，但有着独特的人生观；</h3>
-                    <h3>孤独，却可以聚合出左右世代的力量。我来了，我看见，我征服。</h3>
-                </div>
+                <div class="home_info"></div>
+                <h3 class="home_info1">90后，微弱，但有着独特的人生观；</h3>
+                <h3 class="home_info1">孤独，却可以聚合出左右世代的力量。我来了，我看见，我征服。</h3>
             </div>
         </div>
         <!-- about -->
         <div class="section two">
             <div class="about">
                 <div class="about_name">
-                    <h3>关 于 我</h3>
+                    
                 </div>
                 <div class="about_info">
                     <div class="about_info_part1">
@@ -91,7 +91,7 @@
         <div class="section three">
             <div class="skiil">
                 <div class="skiil_name">
-                    <h3>十八般武艺,熟能生巧</h3>
+                    
                 </div>
                 <div class="skiil_introduce">
                     <p>层出不穷的框架让人兴奋</p>
@@ -126,46 +126,46 @@
             <div class="works">
                 <div class="works_title">
                     <h3>我 的 作 品</h3>
-                    <a href="javascript:;">换一批<i class="fa fa-refresh fa-spin"></i></a>
+                    <a href="javascript:;">换一换<i class="fa fa-refresh fa-spin"></i></a>
                 </div>
                 <div class="works_wrap">
-                    <div class="works_wrapbox" id="box1" style="display: block;">
+                    <div class="works_wrapbox hideing" id="box1" style="display: block;">
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works1.jpg" alt="" /></a>
-                            <p class="hot_title">《新倩女幽魂》</p>
-                            <p class="hot_txt">电视剧《微微一笑很倾城》虚拟世界架构方，"一笑倾城"大型资料片今日公测！</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works2.jpg" alt="" /></a>
-                            <p class="hot_title">《大唐游仙记》</p>
-                            <p class="hot_txt">网易首款3D回合制手游，国风古韵，华美盛唐，全景视角，极致感官体验！</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works3.jpg" alt="" /></a>
-                            <p class="hot_title">《乖离性百万亚瑟王》</p>
-                            <p class="hot_txt">原创画师结合乖离亚瑟，全新原创双人卡牌登场！</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                     </div>
                     <div class="works_wrapbox" id="box2" style="display:none;">
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works4.jpg" alt="" /></a>
-                            <p class="hot_title">《梦幻西游》</p>
-                            <p class="hot_txt">新门派化生寺隆重推出！渡化众生！加入化生寺抽取超级大神猴公仔！</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works5.jpg" alt="" /></a>
-                            <p class="hot_title">《功夫熊猫3》</p>
-                            <p class="hot_txt">功夫熊猫X功夫熊猫3 强强联动，双熊猫福利总动员</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                         <div class="hot_box">
                             <a href="javascript:;"><img src="/images/works6.jpg" alt="" /></a>
-                            <p class="hot_title">《HIT：我守护的一切》</p>
-                            <p class="hot_txt">网易高颜值动作手游《HIT：我守护的一切》今日国服终测！奥运、泳装纷纷加入，打击感强势上线</p>
+                            <p class="hot_title">项目介绍</p>
+                            <p class="hot_txt">项目介绍</p>
                             <i class="gw_link">查看详情</i>
                         </div>
                     </div>
@@ -199,6 +199,7 @@
 </body>
 <script src="./libs/jQuery/jquery-1.11.2.min.js"></script>
 <script src="./libs/fullPage/jquery.fullPage.min.js"></script>
+<script src="./libs/jquery-easing/jquery.easing.min.js"></script>
 <script src="./libs/Jquery-circle-progress/circle-progress.js"></script>
 <script src="./js/main.js"></script>
 
