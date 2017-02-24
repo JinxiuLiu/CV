@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
 /* 公共样式 */
-
 @colorP1: #004B85;
 @colorP2: #FDCB3D;
 @colorP3: #535353;
 @colorP4: #00A0E9;
 
 /*css 初始化 */
-
 html,
 body,
 ul,
@@ -36,9 +34,7 @@ body {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
 }
 
-
 /* 小箭头 */
-
 .arrow {
     width: 27px;
     height: 25px;
@@ -57,9 +53,7 @@ body {
     animation: up_down 1000ms linear infinite;
 }
 
-
 /* 小箭头动画 */
-
 @keyframes up_down {
     0% {
         transform: translateY(0px);
@@ -72,9 +66,7 @@ body {
     }
 }
 
-
 /* 背景图 */
-
 .one {
     background: url(../images/bg1.png);
 }
@@ -95,9 +87,7 @@ body {
     background: url(../images/bg3.png);
 }
 
-
 /*header nav*/
-
 .header {
     width: 100%;
     height: 60px;
@@ -167,7 +157,6 @@ body {
         }
     }
 }
-
 
 /* page one */
 .home {
@@ -312,7 +301,6 @@ body {
     }
 }
 
-
 /* page three */
 .skiil {
     .skiil_name {
@@ -364,7 +352,6 @@ body {
         }
     }
 }
-
 
 /* page four */
 .works {
@@ -460,9 +447,7 @@ body {
     }
 }
 
-
 /* 第四屏 动画 淡入淡出 */
-
 .works_wrapbox.hideing .hot_box {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
@@ -531,13 +516,11 @@ body {
     transition: all .4s linear .6s;
 }
 
-
 /* page five */
-
 .contact {
     color: @colorP3;
     text-align: center;
-    position: relative;
+    // position: relative;
     .contact_title {
         width: 300px;
         height: 80px;
@@ -546,10 +529,14 @@ body {
         margin: 0 auto;
         text-align: center;
         font-size: 30px;
+        opacity: 0;
     }
     .contact_emall {
         margin: 50px auto;
         font-size: 20px;
+        position: relative;
+        top: -300px;
+        opacity: 0;
         i {
             color: #FF0000;
         }
@@ -557,6 +544,8 @@ body {
     .contact_txt {
         p {
             margin: 5px 0;
+            position: relative;
+            bottom: -400px;
         }
         span {
             width: 300px;
@@ -564,10 +553,11 @@ body {
             display: block;
             border-top: 1px dashed @colorP3;
             margin: 30px auto;
+            opacity: 0;
         }
     }
 }
-
+/* footer Copyright */
 .footer {
     width: 100%;
     height: 50px;

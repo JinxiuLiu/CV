@@ -8,7 +8,7 @@ $(function() {
         resize: true,
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
         menu: '#menu',
-        // 页面生成后的回调函数
+        // 页面生成后的回调函数 第一屏动画效果
         afterRender: function() {
             $('#home_one').addClass('animated bounceInRight').next().addClass('animated bounceInLeft');
             $('.home_portrait').addClass('animated zoomIn');
@@ -17,10 +17,10 @@ $(function() {
                     $(".home_info1").eq(1).animate({ bottom: "0" }, 700)
                 });
             });
-
         },
         // 滚动到某一屏后的回调函数
         afterLoad: function(anchorLink, index) {
+            // 第二屏 动画
             if (index == 2) {
                 $(".about_name").html("<h3>关 于 我</h3>")
                     .animate({ width: "300px", height: '80px' }, 600, function() {
@@ -30,14 +30,14 @@ $(function() {
                                     $('.about_info_part5').animate({ opacity: '1' }, 400, function() {
                                         $('.about_info_part3').animate({ opacity: '1' }, 400, function() {
                                             $('.about_info_part6').animate({ opacity: '1' }, 400);
-                                        })
-                                    })
-                                })
-                            })
-                        })
+                                        });
+                                    });
+                                });
+                            });
+                        });
                     });
             }
-            // 第三屏 圆形进度条
+            // 第三屏 动画&圆形进度条
             if (index == 3) {
                 $('.skiil_name').animate({ width: "300px", height: '80px' }, 800, function() {
                     $(this).html('<h3>十八般武艺,熟能生巧</h3>');
@@ -94,12 +94,11 @@ $(function() {
                             });
                         });
                     });
-
                 });
-
             }
+            // 第四屏 动画效果
             if (index == 4) {
-                $('.works_title h3').animate({ width: "300px", height: '80px' }, 700 ,function () {
+                $('.works_title h3').animate({ width: "300px", height: '80px' }, 700 ,function() {
                     $(this).html('我 的 作 品');
                     $('.works_title a').animate({opacity: '1'}, 700).addClass('animated bounceInDown');
                 });
@@ -114,14 +113,28 @@ $(function() {
                     $('#box2').removeClass('hideing').removeClass('showing');
                 }, 1400);
             }
+            // 第五屏 动画效果
+            if (index == 5) {
+                $('.contact_title').animate({opacity: '1'}, 500, function() {
+                    $(this).next().animate({opacity: '1', top: '0px'}, 600, function () {
+                        $('.contact_txt p').eq(0).animate({bottom: '0'}, 700, function() {
+                            $(this).next().animate({bottom: '0'}, 700, function() {
+                                 $(this).next().animate({bottom: '0'}, 700, function() {
+                                    $(this).next().addClass('animated rotateIn').next().animate({bottom: '0'}, 700, function() {
+                                        $(this).next().animate({bottom: '0'}, 700);
+                                    });
+                                 });
+                            });
+                        });
+                    });
+                });
+            }
         }
     });
-
     // 底部小箭头单击事件
     $('.arrow').on('click', function() {
         $.fn.fullpage.moveSectionDown();
     });
-
     // 第四屏 换一换 动画
     $(".works_title a").on('click', function() {
         if ($('#box1').css('display') === 'block') {
