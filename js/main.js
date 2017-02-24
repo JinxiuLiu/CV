@@ -117,9 +117,9 @@ $(function() {
             if (index == 5) {
                 $('.contact_title').animate({opacity: '1'}, 500, function() {
                     $(this).next().animate({opacity: '1', top: '0px'}, 600, function () {
-                        $('.contact_txt p').eq(0).animate({bottom: '0'}, 700, function() {
-                            $(this).next().animate({bottom: '0'}, 700, function() {
-                                 $(this).next().animate({bottom: '0'}, 700, function() {
+                        $('.contact_txt p').eq(0).css('color', '#FF0000').animate({bottom: '0'}, 700, function() {
+                            $(this).next().css('color', '#33CCFF').animate({bottom: '0'}, 700, function() {
+                                 $(this).next().css('color', '#6BCD09').animate({bottom: '0'}, 700, function() {
                                     $(this).next().addClass('animated rotateIn').next().animate({bottom: '0'}, 700, function() {
                                         $(this).next().animate({bottom: '0'}, 700);
                                     });
