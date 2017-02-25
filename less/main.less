@@ -34,6 +34,10 @@ body {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
 }
 
+a {
+    text-decoration: none;
+}
+
 /* 小箭头 */
 .arrow {
     width: 27px;
@@ -266,16 +270,24 @@ body {
         }
         .about_info_part3 {
             width: 30%;
-            margin-top: 120px;
+            margin-top: 50px;
             float: right;
             opacity: 0;
             position: relative;
+            .about_info_part6 {
+                width: 80%;
+                margin-top: 30px;
+                float: right;
+                opacity: 0;
+                position: relative;
+            }
         }
         .about_info_part1::before,
         .about_info_part2::before,
         .about_info_part3::before,
         .about_info_part4::before,
-        .about_info_part5::before {
+        .about_info_part5::before,
+        .about_info_part6::before {
             width: 3px;
             height: 350px;
             content: ' ';
@@ -288,7 +300,8 @@ body {
         .about_info_part2::after,
         .about_info_part3::after,
         .about_info_part4::after,
-        .about_info_part5::after {
+        .about_info_part5::after,
+        .about_info_part6::after {
             width: 10px;
             height: 10px;
             content: ' ';
@@ -391,6 +404,7 @@ body {
             width: 350px;
             height: 300px;
             margin: 80px 0 6px 21px;
+            overflow: hidden;
             background: #fffdfe;
             position: relative;
             box-shadow: 4px 4px 4px #ccc;
@@ -410,21 +424,22 @@ body {
             }
             .hot_title {
                 color: @colorP4;
-                font: 700 20px/32px "微软雅黑";
-                margin: 5px 0 0 20px;
+                font-size: 18px;
+                line-height: 32px;
+                margin: 5px 0 0 30px;
                 height: 32px;
                 overflow: hidden;
             }
             .hot_txt {
                 margin: 5px 20px 0 30px;
-                font: 14px "Microsoft YaHei";
+                font-size: 14px;
                 color: #9f9f9f;
                 text-align: center;
                 text-align: left;
             }
             .gw_link {
                 position: absolute;
-                bottom: 15px;
+                bottom: 8px;
                 right: 20px;
                 width: 88px;
                 height: 30px;
