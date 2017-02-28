@@ -100,7 +100,13 @@ $(function() {
             if (index == 4) {
                 $('.works_title h3').animate({ width: "300px", height: '80px' }, 700 ,function() {
                     $(this).html('我 的 作 品');
-                    $('.works_title a').animate({opacity: '1'}, 700).addClass('animated bounceInDown');
+                    $('.works_title a')
+                    .animate({opacity: '1'}, 700)
+                    .addClass('animated bounceInDown');
+                    setTimeout(function() {
+                    $('.works_title a').removeClass('animated bounceInDown');;
+                }, 750);
+                    
                 });
                 setTimeout(function() {
                     $('#box1').css('display', 'none').removeClass('hideing');
