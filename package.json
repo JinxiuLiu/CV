@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "[在线演示](cv.sayweb.top) ### 使用技术 第三方库：FullPage、jQuery、Font-Awesome、jQuery-easing等",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JinxiuLiu/CV.git"
+  },
+  "author": "Jinxiu Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JinxiuLiu/CV/issues"
+  },
+  "homepage": "https://github.com/JinxiuLiu/CV#readme"
+}
