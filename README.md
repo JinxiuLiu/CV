@@ -1,6 +1,6 @@
 # CV of Jinxiu Liu
 ### 在线版
-[在线演示](cv.sayweb.top)
+[在线演示](http://cv.sayweb.top)
 ### 使用技术
 第三方库：FullPage、jQuery、Font-Awesome、jQuery-easing等
 
